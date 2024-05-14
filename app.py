@@ -59,14 +59,10 @@ for video in range(15):
     else:
         #codigo para curtir a postagem
         sleep(4)
-        botao_entrar = driver.find_element(By.XPATH,"//<use [xlink:href='#heart-fill-52d919d9']")
+        botao_entrar = driver.find_element(By.XPATH,"//<use[xlink:href='#heart-fill-52d919d9']")
         botao_entrar.click()
         sleep(4)
         pyautogui.press('down')
-
-
-
-
 
 
 
