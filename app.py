@@ -49,18 +49,18 @@ sleep(10)
 
 #verificar se a postagem ja foi curtida 
 for video in range(15):
-    imagem = pyautogui.locateAllOnScreen('curtida.png')
+    imagem_nao_curtida = pyautogui.locateAllOnScreen('naocurtida.png')
+    imagem_curtida  = pyautogui.locateAllOnScreen('curtida.png')
     sleep(10)
 
-    if imagem:
+    if imagem_curtida:
         #pule para proximo video 
         pyautogui.press('down')
         sleep(4)
-    else:
-        #codigo para curtir a postagem
-        sleep(4)
-        botao_entrar = driver.find_element(By.XPATH,"//<use[xlink:href='#heart-fill-52d919d9']")
-        botao_entrar.click()
+    elif imagem_nao_curtida:
+        #codigo para curtirda postagem
+        imagem_nao_curtida = pyautogui.locateAllOnScreen('naocurtida.png')
+        pyautogui.click('naocurtida.png') 
         sleep(4)
         pyautogui.press('down')
 
