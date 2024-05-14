@@ -12,8 +12,10 @@ pyautogui.click(1095,256, duration =2)
 #Prencher o login e senha 
 #email
 pyautogui.click(963,297, duration =2)
+pyautogui.write('leonardogbarbosa16')
 #senha
 pyautogui.click(959,340, duration =2)
+pyautogui.write('123Leo456.')
 #clicar em entrar
 pyautogui.click(975,428, duration =2)
 
