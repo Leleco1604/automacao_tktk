@@ -26,7 +26,7 @@ sleep(5)
 
 #Prencher o login e senha 
 #email
-pyautogui.click(596,284, duration =2)
+pyautogui.click(596,284, duration =2, clicks =2)
 pyautogui.write('leonardogbarbosa16')
 sleep(2)
 
@@ -52,17 +52,6 @@ for video in range(15):
     imagem_nao_curtida = pyautogui.locateAllOnScreen('naocurtida.png')
     imagem_curtida  = pyautogui.locateAllOnScreen('curtida.png')
     sleep(10)
-
-    if imagem_curtida:
-        #pule para proximo video 
-        pyautogui.press('down')
-        sleep(4)
-    elif imagem_nao_curtida:
-        #codigo para curtirda postagem
-        imagem_nao_curtida = pyautogui.locateAllOnScreen('naocurtida.png')
-        pyautogui.click('naocurtida.png') 
-        sleep(4)
-        pyautogui.press('down')
-
-
-
+    pyautogui.click(627,322, duration=0.1, clicks = 2)
+    sleep(4)
+    pyautogui.press('down')
