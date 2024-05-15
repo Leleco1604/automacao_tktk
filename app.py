@@ -37,11 +37,18 @@ sleep(2)
 
 #clicar em Login
 pyautogui.click(620,415, duration =3)
-sleep(15)
+sleep(25)
+
+#clicar para abrir outra janela na mesma aba 
+pyautogui.click(295,18, duration= 2)
+sleep(5)
 
 #Navegar até a pagina que eu quero curtir tudo 
-webbrowser.open('https://www.tiktok.com/@letspagnolo')
-sleep(10)
+pyautogui.click(849,57, duration= 2)
+pyautogui.write('https://www.tiktok.com/@letspagnolo')
+pyautogui.press('enter')
+sleep(8)
+
 
 #clicar na poastagem mais recente 
 pyautogui.click(342,556, duration =3)
